@@ -1,0 +1,5 @@
+<div class="sharing">
+  {% if site.x_user %}
+  <a href="https://x.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title | url_encode }}&via={{ site.x_user }}" target="_blank" rel="noopener noreferrer" class="x-share-link">Share on X</a>
+  {% endif %}
+</div>

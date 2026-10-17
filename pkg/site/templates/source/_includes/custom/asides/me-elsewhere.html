@@ -1,0 +1,19 @@
+{% if site.x_user or site.instagram_user or site.medium_user or site.goodreads_user %}
+<section>
+    <h1>Me Elsewhere</h1>
+    <ul id="me-elsewhere">
+        {% if site.x_user %}
+        <li class="post"><a href="https://x.com/{{ site.x_user }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> X (Twitter)</a></li>
+        {% endif %}
+        {% if site.instagram_user %}
+        <li class="post"><a href="http://instagram.com/{{ site.instagram_user }}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        {% endif %}
+        {% if site.medium_user %}
+        <li class="post"><a href="http://medium.com/@{{ site.medium_user }}" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i> Medium</a></li>
+        {% endif %}
+        {% if site.goodreads_user %}
+        <li class="post"><a href="https://www.goodreads.com/user/show/{{ site.goodreads_user }}" target="_blank"><i class="fa fa-book" aria-hidden="true"></i> Goodreads</a></li>
+        {% endif %}
+    </ul>
+</section>
+{% endif %}
