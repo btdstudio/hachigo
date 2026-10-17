@@ -1,0 +1,11 @@
+{% if site.category_list %}
+<section>
+    <h1>Categories</h1>
+    <ul id="categories">
+        {% for category in site.category_list %}
+        <li class="post"><a href="{{ root_url }}/blog/categories/{{ category.slug }}/">{{ category.name | capitalize }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+  

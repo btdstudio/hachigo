@@ -1,0 +1,103 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: https://github.com/briantimmer/hachigo
+title: Your New Blog
+subtitle: Thoughts on Stuff and Junk
+author: Hachigo Thinker
+simple_search: https://www.google.com/search
+description:
+copyright_year: 2026
+
+# Default date format is "ordinal" (resulting in "July 22nd 2007")
+# You can customize the format as defined in
+# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
+# Additionally, %o will give you the ordinal representation of the day
+date_format: "ordinal"
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: /atom.xml
+subscribe_email:
+# RSS feeds can list your email address if you like
+email: 
+
+# ----------------------- #
+#    Plugins              #
+# ----------------------- #
+
+root: /
+permalink: /blog/:year/:month/:day/:title/
+source: source
+destination: public
+plugins: plugins
+code_dir: downloads/code
+category_dir: blog/categories
+
+paginate: 10          # Posts per page on the blog index
+paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
+recent_posts: 5       # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_separator: "<!--more-->"
+
+titlecase: true       # Converts page and post titles to titlecase
+
+# list each of the sidebar modules you want to include, in the order you want them to appear.
+# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
+default_asides: [custom/asides/categories.html, asides/recent_posts.html, custom/asides/me-elsewhere.html, asides/github.html]
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+# Github repositories
+github_user:
+github_repo_count: 0
+github_show_profile_link: true
+github_skip_forks: true
+
+# X/Twitter
+x_user: 
+
+# Instagram
+instagram_user: 
+
+# Medium
+medium_user: 
+
+# Goodreads
+goodreads_user: 
+
+# Disqus Comments
+disqus_short_name: 
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: 
+
+# ----------------------- #
+#      Deploy Configs     #
+# ----------------------- #
+
+# AWS S3 (or S3-compatible, e.g. R2, Spaces):
+# deploy:
+#   type: s3
+#   bucket: my-blog-bucket
+#   region: us-east-1
+#   endpoint: https://xxx.r2.cloudflarestorage.com  # optional for non-AWS
+#   path: /blog                                     # optional subfolder
+#
+# GitHub Pages:
+# deploy:
+#   type: github
+#   repo: git@github.com:briantimmer/briantimmer.github.io.git
+#   branch: gh-pages
+#
+# SFTP / FTP:
+# deploy:
+#   type: sftp # or ftp
+#   host: ftp.example.com
+#   port: 22   # 21 for FTP
+#   user: username
+#   target_dir: /var/www/html
+#   key_path: ~/.ssh/id_rsa  # optional (defaults to standard SSH key locations) 
