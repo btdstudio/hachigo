@@ -20,13 +20,13 @@ It enables lightning-fast compilation of classic layouts, includes, date-slug po
 The easiest way to install and update Hachigo globally is using the Go toolchain:
 
 ```bash
-go install github.com/briantimmer/hachigo/cmd/hachigo@latest
+go install github.com/btdstudio/hachigo/cmd/hachigo@latest
 ```
 
 ### Keeping it updated
 To get the latest bugfixes and features, simply re-run:
 ```bash
-go install github.com/briantimmer/hachigo/cmd/hachigo@latest
+go install github.com/btdstudio/hachigo/cmd/hachigo@latest
 ```
 
 ### Shell Path Setup

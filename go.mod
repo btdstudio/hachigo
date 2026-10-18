@@ -1,4 +1,4 @@
-module github.com/briantimmer/hachigo
+module github.com/btdstudio/hachigo
 
 go 1.26.4
 

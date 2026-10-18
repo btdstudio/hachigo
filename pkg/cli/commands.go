@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/briantimmer/hachigo/pkg/config"
-	"github.com/briantimmer/hachigo/pkg/deploy"
-	"github.com/briantimmer/hachigo/pkg/server"
-	"github.com/briantimmer/hachigo/pkg/site"
+	"github.com/btdstudio/hachigo/pkg/config"
+	"github.com/btdstudio/hachigo/pkg/deploy"
+	"github.com/btdstudio/hachigo/pkg/server"
+	"github.com/btdstudio/hachigo/pkg/site"
 
 	"github.com/spf13/cobra"
 )

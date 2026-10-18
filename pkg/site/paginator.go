@@ -2,7 +2,7 @@ package site
 
 import (
 	"fmt"
-	"github.com/briantimmer/hachigo/pkg/content"
+	"github.com/btdstudio/hachigo/pkg/content"
 )
 
 // Paginator represents the paginator object exposed to index templates
