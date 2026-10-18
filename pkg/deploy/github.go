@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/briantimmer/hachigo/pkg/config"
+	"github.com/btdstudio/hachigo/pkg/config"
 )
 
 // GithubDeployer deploys the built site to GitHub Pages using git force-push

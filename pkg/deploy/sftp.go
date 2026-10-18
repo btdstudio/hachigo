@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/briantimmer/hachigo/pkg/config"
+	"github.com/btdstudio/hachigo/pkg/config"
 	"github.com/jlaffaye/ftp"
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/briantimmer/hachigo/pkg/cli"
+import "github.com/btdstudio/hachigo/pkg/cli"
 
 func main() {
 	cli.Execute()

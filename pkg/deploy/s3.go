@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	awsconfig "github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"github.com/briantimmer/hachigo/pkg/config"
+	"github.com/btdstudio/hachigo/pkg/config"
 )
 
 // S3Deployer deploys the built site to AWS S3 or S3-compatible object storage

@@ -2,9 +2,9 @@ package site
 
 import (
 	"fmt"
-	"github.com/briantimmer/hachigo/pkg/config"
-	"github.com/briantimmer/hachigo/pkg/content"
-	"github.com/briantimmer/hachigo/pkg/renderer"
+	"github.com/btdstudio/hachigo/pkg/config"
+	"github.com/btdstudio/hachigo/pkg/content"
+	"github.com/btdstudio/hachigo/pkg/renderer"
 	"os"
 	"path/filepath"
 	"sort"
