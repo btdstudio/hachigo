@@ -8,56 +8,56 @@ import (
 
 // Config represents the Hachigo configuration loaded from _config.yml
 type Config struct {
-	URL              string   `yaml:"url"`
-	Title            string   `yaml:"title"`
-	Subtitle         string   `yaml:"subtitle"`
-	Author           string   `yaml:"author"`
-	SimpleSearch     string   `yaml:"simple_search"`
-	Description      string   `yaml:"description"`
-	DateFormat       string   `yaml:"date_format"`
-	SubscribeRSS     string   `yaml:"subscribe_rss"`
-	SubscribeEmail   string   `yaml:"subscribe_email"`
-	Email            string   `yaml:"email"`
-	Root             string   `yaml:"root"`
-	Permalink        string   `yaml:"permalink"`
-	Source           string   `yaml:"source"`
-	Destination      string   `yaml:"destination"`
-	Plugins          string   `yaml:"plugins"`
-	CodeDir          string   `yaml:"code_dir"`
-	CategoryDir      string   `yaml:"category_dir"`
-	Markdown         string   `yaml:"markdown"`
-	Paginate         int      `yaml:"paginate"`
-	PaginatePath     string   `yaml:"paginate_path"`
-	RecentPosts      int      `yaml:"recent_posts"`
-	ExcerptLink      string   `yaml:"excerpt_link"`
-	ExcerptSeparator string   `yaml:"excerpt_separator"`
-	Titlecase        bool     `yaml:"titlecase"`
-	DefaultAsides    []string `yaml:"default_asides"`
-	CopyrightYear    int      `yaml:"copyright_year"`
-	InstagramUser    string   `yaml:"instagram_user"`
-	MediumUser       string   `yaml:"medium_user"`
-	GoodreadsUser    string   `yaml:"goodreads_user"`
-	GithubUser       string   `yaml:"github_user"`
-	GithubRepoCount  int      `yaml:"github_repo_count"`
-	GithubShowProfileLink bool `yaml:"github_show_profile_link"`
-	GithubSkipForks  bool     `yaml:"github_skip_forks"`
-	XUser            string   `yaml:"x_user"`
-	Deploy           DeployConfig `yaml:"deploy"`
+	URL                   string       `yaml:"url"`
+	Title                 string       `yaml:"title"`
+	Subtitle              string       `yaml:"subtitle"`
+	Author                string       `yaml:"author"`
+	SimpleSearch          string       `yaml:"simple_search"`
+	Description           string       `yaml:"description"`
+	DateFormat            string       `yaml:"date_format"`
+	SubscribeRSS          string       `yaml:"subscribe_rss"`
+	SubscribeEmail        string       `yaml:"subscribe_email"`
+	Email                 string       `yaml:"email"`
+	Root                  string       `yaml:"root"`
+	Permalink             string       `yaml:"permalink"`
+	Source                string       `yaml:"source"`
+	Destination           string       `yaml:"destination"`
+	Plugins               string       `yaml:"plugins"`
+	CodeDir               string       `yaml:"code_dir"`
+	CategoryDir           string       `yaml:"category_dir"`
+	Markdown              string       `yaml:"markdown"`
+	Paginate              int          `yaml:"paginate"`
+	PaginatePath          string       `yaml:"paginate_path"`
+	RecentPosts           int          `yaml:"recent_posts"`
+	ExcerptLink           string       `yaml:"excerpt_link"`
+	ExcerptSeparator      string       `yaml:"excerpt_separator"`
+	Titlecase             bool         `yaml:"titlecase"`
+	DefaultAsides         []string     `yaml:"default_asides"`
+	CopyrightYear         int          `yaml:"copyright_year"`
+	InstagramUser         string       `yaml:"instagram_user"`
+	MediumUser            string       `yaml:"medium_user"`
+	GoodreadsUser         string       `yaml:"goodreads_user"`
+	GithubUser            string       `yaml:"github_user"`
+	GithubRepoCount       int          `yaml:"github_repo_count"`
+	GithubShowProfileLink bool         `yaml:"github_show_profile_link"`
+	GithubSkipForks       bool         `yaml:"github_skip_forks"`
+	XUser                 string       `yaml:"x_user"`
+	Deploy                DeployConfig `yaml:"deploy"`
 }
 
 // DeployConfig holds the deployment settings for S3, GitHub Pages, and (S)FTP.
 type DeployConfig struct {
-	Type      string `yaml:"type"`      // s3, github, sftp, ftp
-	Bucket    string `yaml:"bucket"`    // s3
-	Region    string `yaml:"region"`    // s3
-	Endpoint  string `yaml:"endpoint"`  // s3 compatible
-	Path      string `yaml:"path"`      // s3
-	Repo      string `yaml:"repo"`      // github
-	Branch    string `yaml:"branch"`    // github
-	Host      string `yaml:"host"`      // sftp/ftp
-	Port      int    `yaml:"port"`      // sftp/ftp
-	User      string `yaml:"user"`      // sftp/ftp
-	KeyPath   string `yaml:"key_path"`  // sftp custom SSH key path
+	Type      string `yaml:"type"`       // s3, github, sftp, ftp
+	Bucket    string `yaml:"bucket"`     // s3
+	Region    string `yaml:"region"`     // s3
+	Endpoint  string `yaml:"endpoint"`   // s3 compatible
+	Path      string `yaml:"path"`       // s3
+	Repo      string `yaml:"repo"`       // github
+	Branch    string `yaml:"branch"`     // github
+	Host      string `yaml:"host"`       // sftp/ftp
+	Port      int    `yaml:"port"`       // sftp/ftp
+	User      string `yaml:"user"`       // sftp/ftp
+	KeyPath   string `yaml:"key_path"`   // sftp custom SSH key path
 	TargetDir string `yaml:"target_dir"` // sftp/ftp
 }
 
@@ -70,17 +70,17 @@ func Load(path string) (*Config, error) {
 
 	// Set default values matching Octopress defaults before parsing
 	cfg := &Config{
-		Root:             "/",
-		Source:           "source",
-		Destination:      "public",
-		Paginate:         10,
-		PaginatePath:     "posts/:num",
-		RecentPosts:      5,
-		ExcerptLink:      "Read on &rarr;",
-		ExcerptSeparator: "<!--more-->",
-		Titlecase:        true,
+		Root:                  "/",
+		Source:                "source",
+		Destination:           "public",
+		Paginate:              10,
+		PaginatePath:          "posts/:num",
+		RecentPosts:           5,
+		ExcerptLink:           "Read on &rarr;",
+		ExcerptSeparator:      "<!--more-->",
+		Titlecase:             true,
 		GithubShowProfileLink: true,
-		GithubSkipForks:  true,
+		GithubSkipForks:       true,
 	}
 
 	if err := yaml.Unmarshal(data, cfg); err != nil {

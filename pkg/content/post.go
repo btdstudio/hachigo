@@ -123,10 +123,10 @@ func ParsePost(sourceDir, relPath string, permalinkFormat string) (*Post, error)
 // ParseFrontmatterAndBody splits the content by the standard --- delimiters
 func ParseFrontmatterAndBody(content string) (map[string]interface{}, string, error) {
 	fm := make(map[string]interface{})
-	
+
 	// Normalize line endings
 	content = strings.ReplaceAll(content, "\r\n", "\n")
-	
+
 	if !strings.HasPrefix(content, "---\n") {
 		return fm, content, nil
 	}

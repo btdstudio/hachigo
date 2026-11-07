@@ -96,7 +96,6 @@ func Build(cfg *config.Config) error {
 	}
 	siteMap["posts"] = allPostsMaps
 
-
 	// Build categories map
 	categoriesMap := make(map[string][]map[string]interface{})
 	for _, p := range posts {

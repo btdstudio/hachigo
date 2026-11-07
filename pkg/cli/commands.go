@@ -232,7 +232,7 @@ Write page content here.
 func sanitizeSlug(title string) string {
 	slug := strings.ToLower(title)
 	slug = strings.ReplaceAll(slug, " ", "-")
-	
+
 	// Remove non-alphanumeric, non-hyphen characters
 	var b strings.Builder
 	for _, r := range slug {
@@ -240,7 +240,7 @@ func sanitizeSlug(title string) string {
 			b.WriteRune(r)
 		}
 	}
-	
+
 	res := b.String()
 	// Collapse multiple hyphens
 	for strings.Contains(res, "--") {
