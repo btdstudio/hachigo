@@ -1,14 +1,14 @@
-# hachigo CLI (static site generator)
+# hanga CLI (static site generator)
 
 ## Commands
 
-- `cmd/hachigo/main.go` — entry point; calls `cli.Execute()`
+- `cmd/hanga/main.go` — entry point; calls `cli.Execute()`
 - `pkg/cli/commands.go` — all cobra commands live here:
-  - `hachigo build` — compile layouts, includes, posts, pages, assets
-  - `hachigo serve [-p PORT] [-w]` — HTTP preview server + fsnotify watcher
-  - `hachigo new post|page <title>` — scaffold a post/page with frontmatter
-  - `hachigo init [dir]` — scaffold a site from embedded templates
-  - `hachigo deploy` — build, then deploy to the configured backend
+  - `hanga build` — compile layouts, includes, posts, pages, assets
+  - `hanga serve [-p PORT] [-w]` — HTTP preview server + fsnotify watcher
+  - `hanga new post|page <title>` — scaffold a post/page with frontmatter
+  - `hanga init [dir]` — scaffold a site from embedded templates
+  - `hanga deploy` — build, then deploy to the configured backend
   - Root has a persistent `--config/-c` flag; `resolveConfigFile` falls back
     from `config.yml` to Jekyll's `_config.yml`.
 

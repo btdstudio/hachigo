@@ -1,4 +1,4 @@
-module github.com/btdstudio/hachigo
+module github.com/btdstudio/hanga
 
 go 1.26.4
 
@@ -44,6 +44,3 @@ require (
 	golang.org/x/tools v0.38.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-// Contains unintended template assets. Use v0.1.1 or later.
-retract v0.1.0

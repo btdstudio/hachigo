@@ -6,7 +6,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Config represents the Hachigo configuration loaded from _config.yml
+// Config represents the Hanga configuration loaded from _config.yml
 type Config struct {
 	URL                   string       `yaml:"url"`
 	Title                 string       `yaml:"title"`

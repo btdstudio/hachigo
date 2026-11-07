@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/btdstudio/hachigo/pkg/config"
+	"github.com/btdstudio/hanga/pkg/config"
 	"github.com/jlaffaye/ftp"
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
@@ -74,13 +74,13 @@ func (d *SFTPDeployer) deploySFTP(cfg *config.Config) error {
 	}
 
 	// Try Password from Environment Variable
-	password := os.Getenv("HACHIGO_DEPLOY_PASSWORD")
+	password := os.Getenv("HANGA_DEPLOY_PASSWORD")
 	if password != "" {
 		authMethods = append(authMethods, ssh.Password(password))
 	}
 
 	if len(authMethods) == 0 {
-		return fmt.Errorf("SFTP deployment requires either a local SSH key or HACHIGO_DEPLOY_PASSWORD environment variable set")
+		return fmt.Errorf("SFTP deployment requires either a local SSH key or HANGA_DEPLOY_PASSWORD environment variable set")
 	}
 
 	// 2. Dial SSH Server
@@ -187,9 +187,9 @@ func (d *SFTPDeployer) deployFTP(cfg *config.Config) error {
 		return fmt.Errorf("FTP deployment requires 'user' configured in deploy settings")
 	}
 
-	password := os.Getenv("HACHIGO_DEPLOY_PASSWORD")
+	password := os.Getenv("HANGA_DEPLOY_PASSWORD")
 	if password == "" {
-		return fmt.Errorf("FTP deployment requires HACHIGO_DEPLOY_PASSWORD environment variable set")
+		return fmt.Errorf("FTP deployment requires HANGA_DEPLOY_PASSWORD environment variable set")
 	}
 
 	addr := fmt.Sprintf("%s:%d", host, port)

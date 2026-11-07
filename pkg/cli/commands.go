@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/btdstudio/hachigo/pkg/config"
-	"github.com/btdstudio/hachigo/pkg/deploy"
-	"github.com/btdstudio/hachigo/pkg/server"
-	"github.com/btdstudio/hachigo/pkg/site"
+	"github.com/btdstudio/hanga/pkg/config"
+	"github.com/btdstudio/hanga/pkg/deploy"
+	"github.com/btdstudio/hanga/pkg/server"
+	"github.com/btdstudio/hanga/pkg/site"
 
 	"github.com/spf13/cobra"
 )
@@ -25,9 +25,9 @@ var (
 // Execute runs the root command
 func Execute() {
 	rootCmd := &cobra.Command{
-		Use:     "hachigo",
-		Short:   "Hachigo is a fast static blog generator built on Go",
-		Long:    `Hachigo is a reverse-engineered port of Octopress in Go, enabling high-performance compilation of legacy layouts, includes, posts, and assets.`,
+		Use:     "hanga",
+		Short:   "Hanga is a fast static blog generator built on Go",
+		Long:    `Hanga is a reverse-engineered port of Octopress in Go, enabling high-performance compilation of legacy layouts, includes, posts, and assets.`,
 		Version: getVersion(),
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
 			configFile = resolveConfigFile(configFile)
@@ -261,18 +261,18 @@ func initCmd() *cobra.Command {
 				targetDir = args[0]
 			}
 
-			fmt.Printf("Initializing new Hachigo static site in: %s...\n", targetDir)
+			fmt.Printf("Initializing new Hanga static site in: %s...\n", targetDir)
 			if err := site.InitNewSite(targetDir); err != nil {
 				fmt.Printf("Error initializing site: %v\n", err)
 				os.Exit(1)
 			}
-			fmt.Println("New Hachigo static site successfully initialized!")
+			fmt.Println("New Hanga static site successfully initialized!")
 			fmt.Println("\nTo build and preview your new site:")
 			if targetDir != "." {
 				fmt.Printf("  cd %s\n", targetDir)
 			}
-			fmt.Println("  hachigo build")
-			fmt.Println("  hachigo serve")
+			fmt.Println("  hanga build")
+			fmt.Println("  hanga serve")
 		},
 	}
 }
