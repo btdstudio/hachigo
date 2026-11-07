@@ -1,6 +1,6 @@
-# Hachigo (八号) 🚀
+# Hanga (版画) 🚀
 
-Hachigo is a high-performance static blog generator built in Go, designed to modernise and replace legacy Ruby-based Jekyll and Octopress setups.
+Hanga is a high-performance static blog generator built in Go, designed to modernise and replace legacy Ruby-based Jekyll and Octopress setups.
 
 It enables lightning-fast compilation of classic layouts, includes, date-slug posts, pages, and assets, bringing modern Go execution speeds to retro blogging setups.
 
@@ -17,20 +17,20 @@ It enables lightning-fast compilation of classic layouts, includes, date-slug po
 
 ## Installation
 
-The easiest way to install and update Hachigo globally is using the Go toolchain:
+The easiest way to install and update Hanga globally is using the Go toolchain:
 
 ```bash
-go install github.com/btdstudio/hachigo/cmd/hachigo@latest
+go install github.com/btdstudio/hanga/cmd/hanga@latest
 ```
 
 ### Keeping it updated
 To get the latest bugfixes and features, simply re-run:
 ```bash
-go install github.com/btdstudio/hachigo/cmd/hachigo@latest
+go install github.com/btdstudio/hanga/cmd/hanga@latest
 ```
 
 ### Shell Path Setup
-If the `hachigo` command is not recognized after running the installation, make sure Go's binary directory is added to your shell's `$PATH` variable:
+If the `hanga` command is not recognized after running the installation, make sure Go's binary directory is added to your shell's `$PATH` variable:
 
 ```bash
 # Add Go binary path to Zsh profile (macOS default):
@@ -41,13 +41,13 @@ echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.zshrc && source ~/.zshrc
 
 ## Command Reference
 
-Hachigo provides a simple, modern CLI based on Cobra.
+Hanga provides a simple, modern CLI based on Cobra.
 
 ### 1. Initialize a New Site
-Initializes a new directory with the default Hachigo site structure, templates, stylesheets, and initial placeholder content (an about page and a welcome hello-world post).
+Initializes a new directory with the default Hanga site structure, templates, stylesheets, and initial placeholder content (an about page and a welcome hello-world post).
 
 ```bash
-hachigo init [directory]
+hanga init [directory]
 ```
 If directory is omitted, it will initialize in the current directory.
 
@@ -55,7 +55,7 @@ If directory is omitted, it will initialize in the current directory.
 Generates layouts, posts, pages, categories, and copies static assets to the target output directory (defaults to `public/`).
 
 ```bash
-hachigo build [flags]
+hanga build [flags]
 ```
 **Flags:**
 - `-c, --config string`: Path to the configuration file (default: `config.yml` with fallback to `_config.yml`).
@@ -64,7 +64,7 @@ hachigo build [flags]
 Launch a local development server to serve the generated site. If `-w` or `--watch` is specified, it will monitor your files and rebuild automatically on change.
 
 ```bash
-hachigo serve [flags]
+hanga serve [flags]
 ```
 **Flags:**
 - `-p, --port string`: Port to serve the site on (default: `"4000"`).
@@ -74,7 +74,7 @@ hachigo serve [flags]
 Creates a new post file in the `source/_posts/` directory with standardized `.md` extension and default YAML frontmatter.
 
 ```bash
-hachigo new post "My Awesome Go Journey"
+hanga new post "My Awesome Go Journey"
 ```
 *Outputs: `source/_posts/2026-06-27-my-awesome-go-journey.md`*
 
@@ -82,7 +82,7 @@ hachigo new post "My Awesome Go Journey"
 Creates a new subfolder and an index page with default YAML frontmatter.
 
 ```bash
-hachigo new page "about"
+hanga new page "about"
 ```
 *Outputs: `source/about/index.md`*
 
@@ -90,7 +90,7 @@ hachigo new page "about"
 Automatically compiles the static site, then deploys it to your S3 bucket, GitHub Pages, or (S)FTP server based on the configuration in your `config.yml`.
 
 ```bash
-hachigo deploy [flags]
+hanga deploy [flags]
 ```
 **Flags:**
 - `-c, --config string`: Path to the configuration file (default: `config.yml`).
@@ -99,7 +99,7 @@ hachigo deploy [flags]
 
 ## Configuration
 
-Hachigo looks for `config.yml` in the root directory by default. If not found, it seamlessly falls back to Jekyll's default `_config.yml`.
+Hanga looks for `config.yml` in the root directory by default. If not found, it seamlessly falls back to Jekyll's default `_config.yml`.
 
 Example config structure:
 ```yaml
@@ -139,4 +139,4 @@ recent_posts: 5
 ```
 
 > [!TIP]
-> To keep credentials safe, Hachigo loads SFTP/FTP passwords from the `HACHIGO_DEPLOY_PASSWORD` environment variable, and AWS/S3 credentials from standard AWS env vars (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`). Do not hardcode passwords or access keys in your `config.yml`.
+> To keep credentials safe, Hanga loads SFTP/FTP passwords from the `HANGA_DEPLOY_PASSWORD` environment variable, and AWS/S3 credentials from standard AWS env vars (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`). Do not hardcode passwords or access keys in your `config.yml`.

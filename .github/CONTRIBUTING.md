@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to Hachigo! 
+Thank you for your interest in contributing to Hanga! 
 
 ## Getting Started
 - Fork the repository on GitHub.

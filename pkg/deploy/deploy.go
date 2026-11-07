@@ -3,7 +3,7 @@ package deploy
 import (
 	"fmt"
 
-	"github.com/btdstudio/hachigo/pkg/config"
+	"github.com/btdstudio/hanga/pkg/config"
 )
 
 // Deployer defines the interface that all deployment backends must implement
